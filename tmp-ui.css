@@ -1,28 +1,30 @@
+/* src/styles.css */
 :root {
   color: #172033;
   background: #f4f7fb;
-  font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  font-family:
+    Inter,
+    "PingFang SC",
+    "Microsoft YaHei",
+    system-ui,
+    sans-serif;
   --primary: #2563eb;
   --accent: #059669;
   --warn: #dc2626;
   --border: #dbe3ef;
 }
-
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   min-width: 320px;
 }
-
 button,
 input,
 textarea {
   font: inherit;
 }
-
 textarea {
   width: 100%;
   border: 1px solid var(--border);
@@ -31,12 +33,10 @@ textarea {
   color: #172033;
   resize: vertical;
 }
-
 input:disabled {
   background: #f1f5f9;
   color: #64748b;
 }
-
 button {
   border: 1px solid var(--border);
   background: #ffffff;
@@ -45,13 +45,11 @@ button {
   padding: 0 12px;
   cursor: pointer;
 }
-
 .app-shell {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   padding: 32px 0 48px;
 }
-
 .hero {
   display: grid;
   grid-template-columns: 1fr minmax(260px, 360px);
@@ -59,7 +57,6 @@ button {
   align-items: stretch;
   margin-bottom: 20px;
 }
-
 .hero > div:first-child,
 .stack-card,
 .panel,
@@ -69,33 +66,28 @@ button {
   border-radius: 8px;
   box-shadow: 0 14px 36px rgba(31, 41, 55, 0.08);
 }
-
 .hero > div:first-child {
   padding: 34px;
   border-left: 6px solid var(--primary);
 }
-
 .eyebrow,
 .section-heading p {
   color: var(--primary);
   font-weight: 700;
   margin: 0 0 8px;
 }
-
 h1,
 h2,
 h3,
 p {
   margin-top: 0;
 }
-
 h1 {
   font-size: clamp(30px, 4vw, 48px);
   line-height: 1.05;
   margin-bottom: 14px;
   letter-spacing: 0;
 }
-
 .subtitle {
   color: #526070;
   font-size: 17px;
@@ -103,46 +95,39 @@ h1 {
   max-width: 720px;
   margin-bottom: 0;
 }
-
 .stack-card {
   padding: 24px;
   display: grid;
   align-content: center;
   gap: 10px;
 }
-
 .stack-card span,
 .metric-card span,
 label span {
   color: #64748b;
   font-size: 13px;
 }
-
 .stack-card strong {
   font-size: 18px;
   line-height: 1.5;
 }
-
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
   margin-bottom: 20px;
 }
-
 .metric-card {
   position: relative;
   padding: 20px;
   min-height: 118px;
   overflow: hidden;
 }
-
 .metric-card strong {
   display: block;
   margin-top: 12px;
   font-size: 34px;
 }
-
 .metric-card i {
   position: absolute;
   right: 18px;
@@ -151,42 +136,34 @@ label span {
   height: 8px;
   border-radius: 999px;
 }
-
 .status-ok {
   background: var(--accent);
 }
-
 .status-watch {
   background: var(--warn);
 }
-
 .status-danger {
   background: #e11d48;
 }
-
 .workspace {
   display: grid;
   grid-template-columns: 290px 1fr;
   gap: 20px;
   margin-bottom: 20px;
 }
-
 .panel {
   padding: 22px;
 }
-
 .narrow h2 {
   font-size: 17px;
   margin-bottom: 12px;
 }
-
 .chips {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 24px;
 }
-
 .chips span,
 .chips button {
   min-height: 34px;
@@ -195,11 +172,9 @@ label span {
   border: 1px solid color-mix(in srgb, var(--primary) 28%, #dbe3ef);
   background: color-mix(in srgb, var(--primary) 8%, #ffffff);
 }
-
 .chips.muted button {
   background: #ffffff;
 }
-
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -207,28 +182,23 @@ label span {
   gap: 16px;
   margin-bottom: 18px;
 }
-
 .section-heading h2 {
   margin-bottom: 0;
 }
-
 .primary-action {
   background: var(--primary);
   color: #ffffff;
   border-color: var(--primary);
 }
-
 .field-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
-
 label {
   display: grid;
   gap: 8px;
 }
-
 input {
   width: 100%;
   min-height: 42px;
@@ -237,12 +207,10 @@ input {
   padding: 0 12px;
   color: #172033;
 }
-
 .record-list {
   display: grid;
   gap: 12px;
 }
-
 .record-card {
   display: grid;
   grid-template-columns: 56px 1fr;
@@ -253,7 +221,6 @@ input {
   padding: 16px;
   background: #fbfdff;
 }
-
 .record-index {
   display: grid;
   place-items: center;
@@ -264,52 +231,41 @@ input {
   background: var(--primary);
   font-weight: 800;
 }
-
 .record-card h3 {
   margin-bottom: 6px;
 }
-
 .record-card p {
   margin-bottom: 0;
   color: #526070;
   line-height: 1.6;
 }
-
 @media (max-width: 860px) {
   .hero,
   .workspace,
   .metrics-grid {
     grid-template-columns: 1fr;
   }
-
   .field-grid {
     grid-template-columns: 1fr;
   }
 }
-
-/* ---------- 复查闭环：患者列表 / 表单 / 版本链 ---------- */
-
 .full-width {
   width: 100%;
 }
-
 .primary-action.small {
   min-height: 32px;
   padding: 0 12px;
   font-size: 13px;
 }
-
 .filter-chips button.chip-active {
   background: var(--primary);
   color: #ffffff;
   border-color: var(--primary);
 }
-
 .patient-list {
   display: grid;
   gap: 12px;
 }
-
 .patient-card {
   display: flex;
   justify-content: space-between;
@@ -321,16 +277,13 @@ input {
   cursor: pointer;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
-
 .patient-card:hover {
   border-color: color-mix(in srgb, var(--primary) 55%, var(--border));
 }
-
 .patient-card.selected {
   border-color: var(--primary);
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 22%, #ffffff);
 }
-
 .patient-main h3 {
   display: flex;
   flex-wrap: wrap;
@@ -339,7 +292,6 @@ input {
   margin-bottom: 8px;
   font-size: 17px;
 }
-
 .patient-id {
   font-size: 12px;
   font-weight: 600;
@@ -348,7 +300,6 @@ input {
   border-radius: 999px;
   padding: 2px 10px;
 }
-
 .category-tag {
   font-size: 12px;
   font-weight: 600;
@@ -357,13 +308,11 @@ input {
   border-radius: 999px;
   padding: 2px 10px;
 }
-
 .patient-rx {
   margin-bottom: 0;
   color: #526070;
   font-size: 14px;
 }
-
 .patient-side {
   display: grid;
   justify-items: end;
@@ -371,12 +320,10 @@ input {
   gap: 8px;
   white-space: nowrap;
 }
-
 .version-count {
   font-size: 13px;
   color: #64748b;
 }
-
 .overdue-flag {
   font-size: 12px;
   font-weight: 700;
@@ -385,7 +332,6 @@ input {
   border-radius: 999px;
   padding: 3px 10px;
 }
-
 .fresh-flag {
   font-size: 12px;
   color: #047857;
@@ -393,30 +339,23 @@ input {
   border-radius: 999px;
   padding: 3px 10px;
 }
-
 .empty-hint {
   color: #64748b;
   padding: 24px 0;
   text-align: center;
 }
-
 .guide-list {
   margin: 0;
   padding-left: 22px;
   color: #334155;
   line-height: 2;
 }
-
 .guide-list strong {
   color: var(--warn);
 }
-
-/* ---------- 处方录入表单 ---------- */
-
 .rx-form-panel {
   margin-bottom: 20px;
 }
-
 .inherit-banner {
   display: grid;
   gap: 6px;
@@ -428,80 +367,67 @@ input {
   font-size: 14px;
   color: #334155;
 }
-
 .inherit-banner strong {
   color: var(--primary);
 }
-
 .form-meta-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   margin-bottom: 18px;
 }
-
 .eye-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
-
 .eye-panel {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 16px;
   background: #fbfdff;
 }
-
 .eye-panel h3 {
   font-size: 15px;
   margin-bottom: 14px;
   padding-bottom: 10px;
   border-bottom: 1px dashed var(--border);
 }
-
 .rx-row {
   margin-bottom: 12px;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid transparent;
 }
-
 .rx-row.is-breached {
   border-color: color-mix(in srgb, var(--warn) 45%, var(--border));
   background: color-mix(in srgb, var(--warn) 5%, #ffffff);
 }
-
 .rx-field span {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
-
 .rx-field em {
   font-style: normal;
   font-size: 11px;
   color: #94a3b8;
 }
-
 .rx-input-line {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-top: 6px;
 }
-
 .rx-input-line input {
   flex: 1;
 }
-
 .old-value {
   font-style: normal;
   font-size: 13px;
   color: #64748b;
   white-space: nowrap;
 }
-
 .delta-badge {
   font-size: 12px;
   font-weight: 700;
@@ -509,54 +435,44 @@ input {
   padding: 3px 10px;
   white-space: nowrap;
 }
-
 .delta-same {
   color: #64748b;
   background: #eef2f7;
 }
-
 .delta-minor {
   color: #92400e;
   background: #fef3c7;
 }
-
 .delta-breach {
   color: #b91c1c;
   background: #fee2e2;
 }
-
 .reason-box {
   margin-top: 10px;
 }
-
 .reason-flag {
   color: #b91c1c;
   font-size: 12px;
   font-weight: 700;
   margin-bottom: 6px;
 }
-
 .field-error {
   color: var(--warn);
   font-size: 12px;
   margin-top: 5px;
 }
-
-input[aria-invalid="true"] {
+input[aria-invalid=true] {
   border-color: var(--warn);
 }
-
 .vision-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin-top: 12px;
 }
-
 .note-field {
   margin-top: 16px;
 }
-
 .form-footer {
   display: flex;
   justify-content: space-between;
@@ -564,30 +480,23 @@ input[aria-invalid="true"] {
   gap: 18px;
   margin-top: 18px;
 }
-
 .rule-hint {
   margin: 0;
   font-size: 12px;
   color: #64748b;
   line-height: 1.7;
 }
-
-/* ---------- 版本链 ---------- */
-
 .timeline-panel {
   margin-top: 20px;
 }
-
 .timeline {
   display: grid;
 }
-
 .timeline-item {
   display: grid;
   grid-template-columns: 24px 1fr;
   gap: 12px;
 }
-
 .timeline-link {
   grid-column: 1;
   justify-self: center;
@@ -595,7 +504,6 @@ input[aria-invalid="true"] {
   height: 18px;
   background: var(--border);
 }
-
 .version-card {
   grid-column: 2;
   border: 1px solid var(--border);
@@ -604,19 +512,16 @@ input[aria-invalid="true"] {
   margin-bottom: 4px;
   background: #fbfdff;
 }
-
 .version-card.is-latest {
   border-color: color-mix(in srgb, var(--primary) 50%, var(--border));
   background: color-mix(in srgb, var(--primary) 3%, #ffffff);
 }
-
 .version-head {
   display: flex;
   gap: 14px;
   align-items: center;
   margin-bottom: 12px;
 }
-
 .version-no {
   display: grid;
   place-items: center;
@@ -628,7 +533,6 @@ input[aria-invalid="true"] {
   color: #ffffff;
   font-weight: 800;
 }
-
 .version-meta h3 {
   margin: 0 0 4px;
   font-size: 15px;
@@ -636,12 +540,10 @@ input[aria-invalid="true"] {
   align-items: center;
   gap: 10px;
 }
-
 .version-meta time {
   font-size: 12px;
   color: #64748b;
 }
-
 .latest-pill {
   font-size: 11px;
   font-weight: 700;
@@ -650,30 +552,25 @@ input[aria-invalid="true"] {
   border-radius: 999px;
   padding: 2px 10px;
 }
-
 .version-eyes {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin-bottom: 8px;
 }
-
 .version-eye {
   border: 1px dashed var(--border);
   border-radius: 6px;
   padding: 10px 12px;
 }
-
 .version-eye h4 {
   margin: 0 0 8px;
   font-size: 13px;
   color: #64748b;
 }
-
 .version-eye p {
   margin: 0;
 }
-
 .rx-pill {
   display: inline-block;
   margin: 0 8px 6px 0;
@@ -683,12 +580,10 @@ input[aria-invalid="true"] {
   border-radius: 6px;
   padding: 3px 8px;
 }
-
 .vision-line {
   font-size: 12px;
   color: #64748b;
 }
-
 .version-pd,
 .version-note,
 .no-change-hint {
@@ -696,7 +591,6 @@ input[aria-invalid="true"] {
   color: #526070;
   margin-bottom: 6px;
 }
-
 .change-list {
   list-style: none;
   margin: 10px 0 6px;
@@ -704,65 +598,54 @@ input[aria-invalid="true"] {
   display: grid;
   gap: 8px;
 }
-
 .change-row {
   border-left: 3px solid var(--warn);
   background: color-mix(in srgb, var(--warn) 5%, #ffffff);
   border-radius: 0 6px 6px 0;
   padding: 10px 12px;
 }
-
 .change-head {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
 }
-
 .change-tag {
   font-weight: 700;
   font-size: 13px;
   color: #b91c1c;
 }
-
 .change-values {
   font-size: 13px;
   color: #334155;
 }
-
 .change-reason {
   margin: 8px 0 0;
   font-size: 13px;
   line-height: 1.6;
   color: #334155;
 }
-
 .change-reason i {
   font-style: normal;
   font-weight: 700;
   color: #64748b;
   margin-right: 8px;
 }
-
 .records {
   margin-top: 20px;
 }
-
 @media (max-width: 860px) {
   .form-meta-grid,
   .eye-grid,
   .version-eyes {
     grid-template-columns: 1fr;
   }
-
   .patient-card {
     flex-direction: column;
   }
-
   .patient-side {
     justify-items: start;
   }
-
   .form-footer {
     flex-direction: column;
     align-items: stretch;
